@@ -1,0 +1,183 @@
+# Compiled Object files
+*.o
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# Assembly files (usually generated)
+*.s
+*.S
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+# Make
+*.d
+
+# Autotools
+/autom4te.cache
+/aclocal.m4
+/compile
+/configure
+/depcomp
+/install-sh
+/missing
+/stamp-h1
+config.log
+config.status
+config.h
+config.h.in
+Makefile.in
+
+# pkg-config
+*.pc
+
+# Libtool
+.libs/
+.deps/
+*.lo
+
+# Backup files
+*~
+*.swp
+*.swo
+*#
+.#*
+
+# Core dumps
+core
+core.*
+vgcore.*
+
+# Valgrind
+*.memcheck
+*.helgrind
+*.drd
+*.massif
+*.cachegrind
+*.callgrind
+
+# GDB
+.gdb_history
+
+# Code coverage
+*.gcno
+*.gcda
+*.gcov
+lcov.info
+coverage/
+
+# Profiling
+gmon.out
+*.prof
+
+# Address Sanitizer
+*.asan
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*~
+*.tmp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Test executables (common patterns)
+test_*
+*_test
+tests/test_*
+tests/*_test
+
+# Build directories
+build/
+Build/
+BUILD/
+bin/
+obj/
+lib/
+dist/
+
+# Documentation generated files
+doc/html/
+doc/latex/
+*.pdf
+*.ps
+*.dvi
+
+# Package files
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.rar
+*.7z
+
+# Local environment
+.env
+.env.local
