@@ -39,11 +39,11 @@ void profile_log(struct profile_times *t) {
     
     double elapsed = (end_time.tv_sec - t->start_time.tv_sec) + (end_time.tv_nsec - t->start_time.tv_nsec) / 1e9;  // Calculate elapsed time in seconds
     
-    double user_time = ((end_usage.ru_utime.tv_sec - t->usage.ru_utime.tv_sec) 
-        + (end_usage.ru_utime.tv_usec - t->usage.ru_utime.tv_usec)) / 1e6;  // Calculate user CPU time
+    double user_time = (end_usage.ru_utime.tv_sec - t->usage.ru_utime.tv_sec) 
+        + (end_usage.ru_utime.tv_usec - t->usage.ru_utime.tv_usec) / 1e6;  // Calculate user CPU time
     
-        double sys_time = ((end_usage.ru_stime.tv_sec - t->usage.ru_stime.tv_sec) 
-        + (end_usage.ru_stime.tv_usec - t->usage.ru_stime.tv_usec)) / 1e6;  // Calculate system CPU time
+        double sys_time = (end_usage.ru_stime.tv_sec - t->usage.ru_stime.tv_sec) 
+        + (end_usage.ru_stime.tv_usec - t->usage.ru_stime.tv_usec) / 1e6;  // Calculate system CPU time
     
     print_pid_cpu();
     printf("real time: %.4f seconds  ", elapsed);  // Log the elapsed time
