@@ -8,6 +8,7 @@
 
 #define MAX_INPUT 1024
 #define MAX_TOKENS 64
+#define SEPARATE_CHAR " \t\n"
 
 pid_t child_pid = -1; // Global variable to store the child process ID
 
@@ -44,10 +45,10 @@ int main() {
         }
         
         token_count = 0;
-        char *token = strtok(input, " ");
+        char *token = strtok(input, SEPARATE_CHAR);
         while (token != NULL && token_count < MAX_TOKENS - 1) {
             tokens[token_count++] = token;
-            token = strtok(NULL, " \t");
+            token = strtok(NULL, SEPARATE_CHAR);
         }
         tokens[token_count] = NULL; // Null-terminate the array
 
@@ -75,11 +76,11 @@ int main() {
                 execvp(tokens[0], tokens);
                 perror("execvp"); // If execvp fails
                 exit(EXIT_FAILURE);
-            } else {
-                // Parent process
-                wait(NULL); // Wait for the child process to finish
-                child_pid = -1; // Reset child_pid after waiting
-            }
+            } 
+            int status;
+            // Parent process
+            waitpid(child_pid, &status, 0); // Wait for the child process to finish
+            child_pid = -1; // Reset child_pid after waiting
         }
     }
 
